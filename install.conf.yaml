@@ -11,7 +11,8 @@
     ~/.zplug: zplug
     ~/.tmux.conf: tmux.conf
     ~/.cloudmonkey: cloudmonkey
-    ~/.ssh: ssh
+    ~/.ssh/authorized_keys: ssh/authorized_keys
+    ~/.ssh/config: ssh/config
     ~/.vimrc: vimrc
     ~/.vim/bundle/Vundle.vim:
             create: true
