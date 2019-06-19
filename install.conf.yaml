@@ -9,3 +9,6 @@
     ~/.zshrc: zshrc
     ~/.zplug: zplug
     ~/.vimrc: vimrc
+    ~/.vim/bundle/Vundle.vim:
+            create: true
+            path: Vundle.vim

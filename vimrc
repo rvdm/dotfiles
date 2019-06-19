@@ -46,8 +46,12 @@ filetype plugin indent on    " required
 let python_highlight_all=1
 syntax on
 
-Bundle 'Valloric/YouCompleteMe'
-let g:ycm_autoclose_preview_window_after_completion=1
-map <leader>g  :YcmCompleter GoToDefinitionElseDeclaration<CR>
+"Bundle 'Valloric/YouCompleteMe'
+"let g:ycm_autoclose_preview_window_after_completion=1
+"map <leader>g  :YcmCompleter GoToDefinitionElseDeclaration<CR>
+Plugin 'roxma/nvim-yarp'
+Plugin 'roxma/vim-hug-neovim-rpc'
+Plugin 'shougo/deoplete.nvim'
+let g:deoplete#enable_at_startup = 1
 
 Plugin 'vim-syntastic/syntastic'

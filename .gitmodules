@@ -4,3 +4,6 @@
 [submodule "zplug"]
 	path = zplug
 	url = https://github.com/zplug/zplug
+[submodule "Vundle.vim"]
+	path = Vundle.vim
+	url = https://github.com/VundleVim/Vundle.vim
