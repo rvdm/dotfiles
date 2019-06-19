@@ -119,7 +119,6 @@ alias brewup='brew update; brew upgrade; brew prune; brew cleanup; brew doctor'
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
-
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/Users/rvdm/code/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/rvdm/code/google-cloud-sdk/path.zsh.inc'; fi
 
