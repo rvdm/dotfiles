@@ -9,6 +9,9 @@
     ~/.zshrc: zshrc
     ~/.zsh: zsh
     ~/.zplug: zplug
+    ~/.tmux.conf: tmux.conf
+    ~/.cloudmonkey: cloudmonkey
+    ~/.ssh: ssh
     ~/.vimrc: vimrc
     ~/.vim/bundle/Vundle.vim:
             create: true
