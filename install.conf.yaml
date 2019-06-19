@@ -12,3 +12,6 @@
     ~/.vim/bundle/Vundle.vim:
             create: true
             path: Vundle.vim
+
+- shell:
+  - [git submodule update --init --recursive, Installing submodules]
