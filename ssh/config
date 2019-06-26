@@ -12,9 +12,6 @@ Host cipher.wiretrip.org rvdm.net *.rvdm.net *.wiretrip.org cipher serpent
     LocalCommand ssh -o PermitLocalCommand=no %n "which git >/dev/null && ([[ -d ~/dotfiles ]] && (echo "Updating dotfiles on %h ..." && cd ~/dotfiles && git pull -q && ./install >/dev/null) || (echo "Installing dotfiles on %h ..." && git clone -q https://github.com/rvdm/dotfiles && ./dotfiles/install >/dev/null))"
 
 
-Host 37.48.69.211
-    Port 2222
-
 Host vpn.rvdm.net
     Port 2222
 
