@@ -13,6 +13,7 @@
     ~/.ssh/authorized_keys: ssh/authorized_keys
     ~/.ssh/config: ssh/config
     ~/.vimrc: vimrc
+    ~/.config/nvim: config/nvim
     ~/.vim/bundle/Vundle.vim:
             create: true
             path: Vundle.vim
