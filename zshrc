@@ -132,3 +132,4 @@ bindkey '^[[B' history-substring-search-down
 
 alias vim="nvim"
 alias vi="nvim"
+export QUOTING_STYLE=literal
