@@ -14,6 +14,7 @@
     ~/.ssh/config: ssh/config
     ~/.vimrc: vimrc
     ~/.config/nvim: config/nvim
+            create: true
     ~/.vim/bundle/Vundle.vim:
             create: true
             path: Vundle.vim
