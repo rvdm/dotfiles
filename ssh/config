@@ -6,7 +6,7 @@ Host *
   IdentityFile ~/.ssh/id_rsa
   IdentityFile ~/.ssh/id_dsa
 
-Host cipher.wiretrip.org rvdm.net *.rvdm.net *.wiretrip.org cipher serpent 
+Host cipher.wiretrip.org rvdm.net *.rvdm.net *.wiretrip.org cipher serpent hass hass.local cloud.vnce.nl
     PermitLocalCommand yes
     # Unfortunately ssh does not support line breaks in config files
     LocalCommand ssh -o PermitLocalCommand=no %n "which git >/dev/null && ([[ -d ~/dotfiles ]] && (echo "Updating dotfiles on %h ..." && cd ~/dotfiles && git pull -q && ./install >/dev/null) || (echo "Installing dotfiles on %h ..." && git clone -q https://github.com/rvdm/dotfiles && ./dotfiles/install >/dev/null))"
@@ -18,6 +18,9 @@ Host vpn.rvdm.net
 Host *.amazonaws.com
 	ForwardAgent yes
 	User ubuntu
+
+Host service.coloclue.net
+  ForwardAgent no
 
 Host 37.48.69.*
   ForwardAgent yes
@@ -46,3 +49,5 @@ Host download
 Host 37.48.69.*
 	StrictHostKeyChecking no
         UserKnownHostsFile=/dev/null
+
+
