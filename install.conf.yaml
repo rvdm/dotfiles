@@ -10,7 +10,9 @@
     ~/.zsh: zsh
     ~/.zplug: zplug
     ~/.tmux.conf: tmux.conf
-    ~/.ssh/authorized_keys: ssh/authorized_keys
+    ~/.ssh/authorized_keys: 
+            force: true
+            path: ssh/authorized_keys
     ~/.ssh/config: ssh/config
     ~/.vimrc: vimrc
     ~/.config/nvim:
