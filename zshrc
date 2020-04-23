@@ -42,12 +42,6 @@ zplug "modules/prompt", from:prezto
 zplug "b4b4r07/enhancd", at:v1
 zplug "mollifier/anyframe", at:4c23cb60
 
-# Can manage gist file just like other packages
-zplug "b4b4r07/79ee61f7c140c63d2786", \
-    from:gist, \
-    as:command, \
-    use:get_last_pane_path.sh
-
 # Support bitbucket
 zplug "b4b4r07/hello_bitbucket", \
     from:bitbucket, \
