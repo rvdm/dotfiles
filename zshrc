@@ -96,8 +96,8 @@ prompt skwp
 
 export PATH=/usr/local/opt/python/libexec/bin:/Users/rvdm/Library/Python/3.7/bin:$PATH
 export PATH=/usr/local/opt/python/libexec/bin:/Users/rvdm/Library/Python/3.7/bin:~/bin:$PATH
-export LC_ALL=en_US.UTF-8
-export LANG=en_US.UTF-8
+export LC_ALL=en_GB.UTF-8
+export LANG=en_GB.UTF-8
 export CLICOLOR=1
 
 #export HISTFILE=~/.zsh_history     #Where to save history to disk
