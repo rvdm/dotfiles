@@ -5,8 +5,9 @@ Host *
   IdentityFile ~/.ssh/id_ed25519
   IdentityFile ~/.ssh/id_rsa
   IdentityFile ~/.ssh/id_dsa
+  ServerAliveInterval 10
 
-Host cipher.wiretrip.org rvdm.net *.rvdm.net *.wiretrip.org cipher serpent hass hass.local cloud.vnce.nl rpi4 rpi4.local 
+Host cipher.wiretrip.org rvdm.net *.rvdm.net *.wiretrip.org cipher serpent hass hass.local cloud.vnce.nl rpi4 rpi4.local 192.168.42.46
     PermitLocalCommand yes
     # Unfortunately ssh does not support line breaks in config files
     LocalCommand ssh -o PermitLocalCommand=no %n "which git >/dev/null && ([[ -d ~/dotfiles ]] && (echo "Updating dotfiles on %h ..." && cd ~/dotfiles && git pull -q && ./install >/dev/null) || (echo "Installing dotfiles on %h ..." && git clone -q https://github.com/rvdm/dotfiles && ./dotfiles/install >/dev/null))"
