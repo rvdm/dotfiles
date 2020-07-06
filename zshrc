@@ -126,4 +126,5 @@ bindkey '^[[B' history-substring-search-down
 
 alias vim="nvim"
 alias vi="nvim"
+alias view="nvim -R"
 export QUOTING_STYLE=literal
