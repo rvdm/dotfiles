@@ -1,10 +1,12 @@
 PubkeyAcceptedKeyTypes=+ssh-dss
 
 Host *
-  ForwardAgent yes
+  ForwardAgent no
   IdentityFile ~/.ssh/id_ed25519
   IdentityFile ~/.ssh/id_rsa
   IdentityFile ~/.ssh/id_dsa
+  ControlMaster auto
+  ControlPath ~/.ssh/cm_socket/%r@%h:%p
 
 Host cipher.wiretrip.org rvdm.net *.rvdm.net *.wiretrip.org cipher serpent hass hass.local cloud.vnce.nl rpi4 rpi4.local 192.168.42.46 nuc
     PermitLocalCommand yes
@@ -15,6 +17,9 @@ Host cipher.wiretrip.org rvdm.net *.rvdm.net *.wiretrip.org cipher serpent hass 
 Host vpn.rvdm.net
     Port 2222
 
+Host tinker.rvdm.net
+    ForwardAgent no
+
 Host *.amazonaws.com
 	ForwardAgent yes
 	User ubuntu
@@ -22,29 +27,33 @@ Host *.amazonaws.com
 Host service.coloclue.net
   ForwardAgent no
 
-Host 37.48.69.*
-  ForwardAgent yes
-  IdentityFile ~/.ssh/id_rsa_cloudstack.key
+#Host 37.48.69.*
+#  ForwardAgent yes
+#  IdentityFile ~/.ssh/id_rsa_cloudstack.key
 
-Host 5.79.103.*
-  ForwardAgent yes
-  IdentityFile ~/.ssh/id_rsa_cloudstack.key
+#Host 5.79.103.*
+#  ForwardAgent yes
+#  IdentityFile ~/.ssh/id_rsa_cloudstack.key
 
 Host *.ring.nlnog.net
 	User leaseweb
 	IdentityFile ~/.ssh/id_dsa
         StrictHostKeyChecking no
         UserKnownHostsFile=/dev/null
+    ForwardAgent yes
 
 Host serpent
 	HostName serpent.wiretrip.org
+    ForwardAgent yes
 
 Host cipher
 	HostName cipher.wiretrip.org
+    ForwardAgent yes
 
 Host download
 	HostName download.wiretrip.org
 	StrictHostKeyChecking no
+    ForwardAgent yes
 
 Host 37.48.69.*
 	StrictHostKeyChecking no
