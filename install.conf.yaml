@@ -9,7 +9,8 @@
     ~/.zshrc: zshrc
     ~/.zsh: zsh
     ~/.zplug: zplug
-    ~/.tmux.conf: tmux.conf
+    ~/.tmux.conf: tmux/tmux.conf
+    ~/.tmux.conf.local: tmux/tmux.conf.local
     ~/.ssh/authorized_keys: 
             force: true
             path: ssh/authorized_keys
