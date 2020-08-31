@@ -21,6 +21,7 @@
     ~/.vim/bundle/Vundle.vim:
             create: true
             path: Vundle.vim
+    ~/.p10k.zsh: p10k.zsh
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
