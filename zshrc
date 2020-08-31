@@ -142,5 +142,7 @@ alias vi="nvim"
 alias view="nvim -R"
 export QUOTING_STYLE=literal
 
+# color stuff
 is_darwin && export CLICOLOR=y
 is_linux && alias ls='ls --color=auto'
+alias grep='grep --color=auto'
