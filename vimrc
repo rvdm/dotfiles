@@ -61,3 +61,9 @@ Plugin 'shougo/deoplete.nvim'
 let g:deoplete#enable_at_startup = 1
 
 Plugin 'vim-syntastic/syntastic'
+
+let vundle_check=expand('~/.vim/bundle/vim-autoformat/README.md')
+if !filereadable(vundle_check)
+  :PluginInstall
+endif
+
