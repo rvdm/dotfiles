@@ -14,6 +14,7 @@ is_linux() {
 
 # Make sure to use double quotes
 zplug "zsh-users/zsh-history-substring-search"
+zplug "zsh-users/zsh-autosuggestions"
 
 # Use the package as a command
 # And accept glob patterns (e.g., brace, wildcard, ...)
