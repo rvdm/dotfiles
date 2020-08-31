@@ -65,5 +65,6 @@ Plugin 'vim-syntastic/syntastic'
 let vundle_check=expand('~/.vim/bundle/vim-autoformat/README.md')
 if !filereadable(vundle_check)
   :PluginInstall
+  :UpdateRemotePlugins
 endif
 
