@@ -1,5 +1,17 @@
 source ~/.zplug/init.zsh
 
+is_installed() {
+  command -v "$1" > /dev/null
+}
+
+is_darwin() {
+  [[ $(uname -s) == "Darwin" ]]
+}
+
+is_linux() {
+  [[ $(uname -s) == "Linux" ]]
+}
+
 # Make sure to use double quotes
 zplug "zsh-users/zsh-history-substring-search"
 
@@ -128,3 +140,6 @@ alias vim="nvim"
 alias vi="nvim"
 alias view="nvim -R"
 export QUOTING_STYLE=literal
+
+is_darwin && export CLICOLOR=y
+is_linux && alias ls='ls --color=auto'
