@@ -149,6 +149,7 @@ bindkey '^[[B' history-substring-search-down
 alias vim="nvim"
 alias vi="nvim"
 alias view="nvim -R"
+export EDITOR=nvim
 export QUOTING_STYLE=literal
 
 # color stuff
@@ -159,3 +160,5 @@ alias grep='grep --color=auto'
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 (( ! ${+functions[p10k]} )) || p10k finalize
+
+eval "$(pyenv init -)"
