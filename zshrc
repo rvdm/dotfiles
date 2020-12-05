@@ -161,4 +161,4 @@ alias grep='grep --color=auto'
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 (( ! ${+functions[p10k]} )) || p10k finalize
 
-eval "$(pyenv init -)"
+[[ ! -f /usr/local/bin/pyenv ]] || eval "$(pyenv init -)"
