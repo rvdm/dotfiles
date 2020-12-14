@@ -161,10 +161,8 @@ alias grep='grep --color=auto'
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 (( ! ${+functions[p10k]} )) || p10k finalize
 
-# pyenv on osx
-[[ ! -f /usr/local/bin/pyenv ]] || eval "$(pyenv init -)"
-
-# pyenv on debian
+# pyenv
 [[ ! -d ~/.pyenv/bin ]] || export PATH=$PATH:~/.pyenv/bin
-[[ ! -d ~/.pyenv/bin ]] || eval "$(pyenv init -)"
-[[ ! -d ~/.pyenv/bin ]] || eval "$(pyenv virtualenv-init -)"
+if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
+if which pyenv-virtualenv-init > /dev/null; then eval "$(pyenv virtualenv-init -)"; fi
+
