@@ -151,6 +151,7 @@ alias vi="nvim"
 alias view="nvim -R"
 export EDITOR=nvim
 export QUOTING_STYLE=literal
+export AWS_REGION=eu-west-1
 
 # color stuff
 is_darwin && export CLICOLOR=y
