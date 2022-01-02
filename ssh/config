@@ -1,11 +1,6 @@
 PubkeyAcceptedKeyTypes=+ssh-dss
 
-Host *
-   UseKeychain yes
-   AddKeysToAgent yes
-   IdentityFile ~/.ssh/id_ed25519
-   IdentityFile ~/.ssh/id_rsa
-   IdentityFile ~/.ssh/id_dsa
+Include ~/.ssh/config.local
 
 Host cipher.wiretrip.org rvdm.net *.rvdm.net *.wiretrip.org cipher serpent hass hass.local cloud.vnce.nl rpi4 rpi4.local 192.168.42.46 nuc 10.211.55.3
     PermitLocalCommand yes
