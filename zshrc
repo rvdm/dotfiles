@@ -22,6 +22,8 @@ is_linux() {
 # Make sure to use double quotes
 zplug "zsh-users/zsh-history-substring-search"
 zplug "zsh-users/zsh-autosuggestions"
+zplug "zdharma/fast-syntax-highlighting", as:plugin, defer:2
+
 
 # Use the package as a command
 # And accept glob patterns (e.g., brace, wildcard, ...)
@@ -162,12 +164,21 @@ alias grep='grep --color=auto'
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 (( ! ${+functions[p10k]} )) || p10k finalize
 
-# pyenv
-[[ ! -d ~/.pyenv/bin ]] || export PATH=$PATH:~/.pyenv/bin
-if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
-if which pyenv-virtualenv-init > /dev/null; then eval "$(pyenv virtualenv-init -)"; fi
-
 # homebrew
 [[ ! -f /opt/homebrew/bin/brew ]] || eval "$(/opt/homebrew/bin/brew shellenv)"
 
+# pyenv
+[[ ! -d ~/.pyenv/bin ]] || export PATH=$PATH:~/.pyenv/bin
+if which pyenv > /dev/null; then eval "$(pyenv init --path)"; fi
+if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
+if which pyenv-virtualenv-init > /dev/null; then eval "$(pyenv virtualenv-init -)"; fi
+
+
 # dummy change
+export PATH="$PATH:/Users/rvdm/.local/bin"
+### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
+export PATH="/Users/rvdm/.rd/bin:$PATH"
+### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
+eval "$(direnv hook zsh)"
+[[ ! -f ~/.secrets.zsh ]] || source ~/.secrets.zsh
+alias ring_gethostsfile='scp leaseweb02.ring.nlnog.net:/etc/ssh/ssh_known_hosts ~/.ssh/known_hosts_ring'

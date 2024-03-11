@@ -5,6 +5,11 @@ set tabstop=4
 set shiftwidth=4
 set expandtab
 set softtabstop=4
+" visible tab test
+set listchars=tab:>.,trail:.,extends:#,nbsp:.
+set list
+set shiftround
+
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -67,4 +72,5 @@ if !filereadable(vundle_check)
   :PluginInstall
   :UpdateRemotePlugins
 endif
+let g:CommandTPreferredImplementation='lua'
 

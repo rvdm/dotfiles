@@ -2,11 +2,19 @@ PubkeyAcceptedKeyTypes=+ssh-dss
 
 Include ~/.ssh/config.local
 
-Host cipher.wiretrip.org rvdm.net *.rvdm.net *.wiretrip.org cipher serpent hass hass.local cloud.vnce.nl rpi4 rpi4.local 192.168.42.46 nuc 10.211.55.3
+Host cipher.wiretrip.org rvdm.net *.rvdm.net *.wiretrip.org cipher serpent hass hass.local cloud.vnce.nl rpi4 rpi4.local 192.168.42.46 nuc 10.211.55.3 193.123.58.101
     PermitLocalCommand yes
     # Unfortunately ssh does not support line breaks in config files
     LocalCommand ssh -o PermitLocalCommand=no %n "which git >/dev/null && ([[ -d ~/dotfiles ]] && (echo "Updating dotfiles on %h ..." && cd ~/dotfiles && git pull -q && ./install >/dev/null) || (echo "Installing dotfiles on %h ..." && git clone -q https://github.com/rvdm/dotfiles && ./dotfiles/install >/dev/null))"
 
+Host backup
+    HostName u324609.your-storagebox.de
+    User u324609
+    IdentityFile ~/.ssh/id_hetznerbackup
+    Port 23
+
+Host rvdmring.rvdm.net
+    ProxyCommand ssh -W %h:%p rvdm@94.142.245.72
 
 Host openbsd.rvdm.net
     ForwardAgent yes
@@ -38,11 +46,10 @@ Host service.coloclue.net
 #  IdentityFile ~/.ssh/id_rsa_cloudstack.key
 
 Host *.ring.nlnog.net
-	User leaseweb
-	IdentityFile ~/.ssh/id_dsa
-        StrictHostKeyChecking no
-        UserKnownHostsFile=/dev/null
-    ForwardAgent yes
+	User rvdm
+    StrictHostKeyChecking no
+    UserKnownHostsFile /home/rvdm/.ssh/known_hosts_ring
+    IdentityFile ~/.ssh/id_ed25519
 
 Host serpent
 	HostName serpent.wiretrip.org
