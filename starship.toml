@@ -18,11 +18,13 @@ disabled = true
 
 [username]
 show_always = true
-format = "[$user@]($style)"
+format = "[$user]($style)@"
+style_user = "fg:bright-green"
 
 [hostname]
 ssh_only = false
 format = "[$hostname]($style):"
+style = "fg:bright-yellow"
 
 [directory]
 format = "[ $path ]($style)"

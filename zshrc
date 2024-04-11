@@ -22,7 +22,7 @@ is_linux() {
 # Make sure to use double quotes
 zplug "zsh-users/zsh-history-substring-search"
 zplug "zsh-users/zsh-autosuggestions"
-zplug "zdharma/fast-syntax-highlighting", as:plugin, defer:2
+#zplug "zdharma/fast-syntax-highlighting", as:plugin, defer:2
 
 
 # Use the package as a command
@@ -91,7 +91,7 @@ zplug "plugins/git",   from:oh-my-zsh
 # e.g., zsh-syntax-highlighting must be loaded
 # after executing compinit command and sourcing other plugins
 # (If the defer tag is given 2 or above, run after compinit command)
-#zplug "zsh-users/zsh-syntax-highlighting", defer:2
+zplug "zsh-users/zsh-syntax-highlighting", defer:2
 
 # Can manage local plugins
 zplug "~/.zsh", from:local
