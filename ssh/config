@@ -13,8 +13,9 @@ Host backup
     IdentityFile ~/.ssh/id_hetznerbackup
     Port 23
 
-Host rvdmring.rvdm.net
+Host ring.rvdm.net
     ProxyCommand ssh -W %h:%p rvdm@94.142.245.72
+    ForwardAgent yes
 
 Host openbsd.rvdm.net
     ForwardAgent yes
@@ -46,7 +47,8 @@ Host service.coloclue.net
 #  IdentityFile ~/.ssh/id_rsa_cloudstack.key
 
 Host *.ring.nlnog.net
-	User rvdm
+    User rvdm
+    ForwardAgent yes
     StrictHostKeyChecking no
     UserKnownHostsFile /home/rvdm/.ssh/known_hosts_ring
     IdentityFile ~/.ssh/id_ed25519
