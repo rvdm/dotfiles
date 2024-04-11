@@ -23,6 +23,7 @@
             create: true
             path: Vundle.vim
     ~/.p10k.zsh: p10k.zsh
+    ~/.config/starship.toml: starship.toml
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
