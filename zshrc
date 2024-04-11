@@ -98,7 +98,7 @@ zplug "~/.zsh", from:local
 
 # Load theme file
 #zplug 'dracula/zsh', as:theme
-zplug romkatv/powerlevel10k, as:theme, depth:1
+#zplug romkatv/powerlevel10k, as:theme, depth:1
 
 zplug "lib/history", from:oh-my-zsh
 
