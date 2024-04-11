@@ -1,9 +1,9 @@
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
+#if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+#  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+#fi
 
 source ~/.zplug/init.zsh
 
@@ -47,7 +47,7 @@ zplug "k4rthik/git-cal", as:command, frozen:1
 zplug "plugins/git",   from:oh-my-zsh
 
 # Also prezto
-zplug "modules/prompt", from:prezto
+#zplug "modules/prompt", from:prezto
 
 # Load if "if" tag returns true
 #zplug "lib/clipboard", from:oh-my-zsh, if:"[[ $OSTYPE == *darwin* ]]"
@@ -115,7 +115,7 @@ fi
 # Then, source plugins and add commands to $PATH
 zplug load
 
-prompt skwp
+#prompt skwp
 
 export PATH=/usr/local/opt/python/libexec/bin:/Users/rvdm/Library/Python/3.7/bin:$PATH
 export PATH=/usr/local/opt/python/libexec/bin:/Users/rvdm/Library/Python/3.7/bin:~/bin:$PATH
@@ -161,8 +161,8 @@ is_linux && alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-(( ! ${+functions[p10k]} )) || p10k finalize
+#[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+#(( ! ${+functions[p10k]} )) || p10k finalize
 
 # homebrew
 [[ ! -f /opt/homebrew/bin/brew ]] || eval "$(/opt/homebrew/bin/brew shellenv)"
@@ -182,3 +182,4 @@ export PATH="/Users/rvdm/.rd/bin:$PATH"
 eval "$(direnv hook zsh)"
 [[ ! -f ~/.secrets.zsh ]] || source ~/.secrets.zsh
 alias ring_gethostsfile='scp leaseweb02.ring.nlnog.net:/etc/ssh/ssh_known_hosts ~/.ssh/known_hosts_ring'
+eval "$(starship init zsh)"
