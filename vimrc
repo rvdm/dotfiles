@@ -9,6 +9,7 @@ set softtabstop=4
 set listchars=tab:>.,trail:.,extends:#,nbsp:.
 set list
 set shiftround
+set bdir=~/.neovim_temp
 
 
 " set the runtime path to include Vundle and initialize
