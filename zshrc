@@ -183,3 +183,5 @@ eval "$(direnv hook zsh)"
 [[ ! -f ~/.secrets.zsh ]] || source ~/.secrets.zsh
 alias ring_gethostsfile='scp leaseweb02.ring.nlnog.net:/etc/ssh/ssh_known_hosts ~/.ssh/known_hosts_ring'
 eval "$(starship init zsh)"
+# ensure neovim backupdir existence
+[[ -d ~/.neovim_temp ]] || mkdir ~/.neovim_temp
