@@ -74,4 +74,4 @@ if !filereadable(vundle_check)
   :UpdateRemotePlugins
 endif
 let g:CommandTPreferredImplementation='lua'
-
+set mouse=

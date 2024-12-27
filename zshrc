@@ -5,7 +5,13 @@
 #  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 #fi
 
-source ~/.zplug/init.zsh
+#source ~/.zplug/init.zsh
+
+# replace zplug with zinit
+ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
+[ ! -d $ZINIT_HOME ] && mkdir -p "$(dirname $ZINIT_HOME)"
+[ ! -d $ZINIT_HOME/.git ] && git clone https://github.com/zdharma-continuum/zinit.git "$ZINIT_HOME"
+source "${ZINIT_HOME}/zinit.zsh"
 
 is_installed() {
   command -v "$1" > /dev/null
@@ -19,28 +25,29 @@ is_linux() {
   [[ $(uname -s) == "Linux" ]]
 }
 
-zplug "zsh-users/zsh-history-substring-search"
-zplug "zsh-users/zsh-autosuggestions"
-
-zplug "plugins/git",   from:oh-my-zsh
-
-zplug "zsh-users/zsh-syntax-highlighting", defer:2
-
+#zplug "zsh-users/zsh-history-substring-search"
+zinit load "zsh-users/zsh-history-substring-search"
+#zplug "zsh-users/zsh-autosuggestions"
+zinit load "zsh-users/zsh-autosuggestions"
+#zplug "plugins/git",   from:oh-my-zsh
+zinit snippet OMZ::plugins/git
+#zplug "zsh-users/zsh-syntax-highlighting", defer:2
+zinit load "zsh-users/zsh-syntax-highlighting"
 # manage local plugins
-zplug "~/.zsh", from:local
-
-zplug "lib/history", from:oh-my-zsh
+# zplug "~/.zsh", from:local
+#zplug "lib/history", from:oh-my-zsh
+#zinit snippet OMZ::lib/history
 
 # Install plugins if there are plugins that have not been installed
-if ! zplug check --verbose; then
-    printf "Install? [y/N]: "
-    if read -q; then
-        echo; zplug install
-    fi
-fi
+#if ! zplug check --verbose; then
+#    printf "Install? [y/N]: "
+#    if read -q; then
+#        echo; zplug install
+#    fi
+#fi
 
 # Then, source plugins and add commands to $PATH
-zplug load
+#zplug load
 
 #prompt skwp
 
@@ -100,3 +107,9 @@ alias ring_gethostsfile='scp leaseweb02.ring.nlnog.net:/etc/ssh/ssh_known_hosts 
 eval "$(starship init zsh)"
 # ensure neovim backupdir existence
 [[ -d ~/.neovim_temp ]] || mkdir ~/.neovim_temp
+
+autoload -Uz compinit
+for dump in ~/.zcompdump(N.mh+24); do
+  compinit
+done
+compinit -C
