@@ -26,13 +26,13 @@ is_linux() {
 }
 
 #zplug "zsh-users/zsh-history-substring-search"
-zinit load "zsh-users/zsh-history-substring-search"
+zinit light "zsh-users/zsh-history-substring-search"
 #zplug "zsh-users/zsh-autosuggestions"
-zinit load "zsh-users/zsh-autosuggestions"
+zinit light "zsh-users/zsh-autosuggestions"
 #zplug "plugins/git",   from:oh-my-zsh
 zinit snippet OMZ::plugins/git
 #zplug "zsh-users/zsh-syntax-highlighting", defer:2
-zinit load "zsh-users/zsh-syntax-highlighting"
+zinit light "zsh-users/zsh-syntax-highlighting"
 # manage local plugins
 # zplug "~/.zsh", from:local
 #zplug "lib/history", from:oh-my-zsh
@@ -113,3 +113,6 @@ for dump in ~/.zcompdump(N.mh+24); do
   compinit
 done
 compinit -C
+
+setopt share_history
+setopt inc_append_history
