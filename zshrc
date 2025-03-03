@@ -54,6 +54,7 @@ zinit light "zsh-users/zsh-syntax-highlighting"
 export PATH=/usr/local/opt/python/libexec/bin:/Users/rvdm/Library/Python/3.7/bin:$PATH
 export PATH=/usr/local/opt/python/libexec/bin:/Users/rvdm/Library/Python/3.7/bin:~/bin:$PATH
 export PATH=$PATH:~/go/bin:/home/rvdm/.local/bin
+export PATH=/usr/local/nvim/bin/:$PATH
 export LC_ALL=en_GB.UTF-8
 export LANG=en_GB.UTF-8
 export CLICOLOR=1
