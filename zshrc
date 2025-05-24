@@ -117,3 +117,4 @@ compinit -C
 
 setopt share_history
 setopt inc_append_history
+export HISTFILE=~/.zsh_history
