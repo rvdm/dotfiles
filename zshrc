@@ -78,6 +78,7 @@ bindkey '^[[B' history-substring-search-down
 alias vim="nvim"
 alias vi="nvim"
 alias view="nvim -R"
+alias ip='ip -color=auto'
 export EDITOR=nvim
 export QUOTING_STYLE=literal
 export AWS_REGION=eu-west-1
