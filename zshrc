@@ -121,3 +121,11 @@ setopt inc_append_history
 export HISTFILE=~/.zsh_history
 export MANPAGER="less -R --use-color -Dd+r -Du+b"
 export MANROFFOPT="-P -c"
+
+export HOMEBREW_DOWNLOAD_CONCURRENCY=auto
+
+
+# Added by LM Studio CLI (lms)
+export PATH="$PATH:/Users/rvdm/.lmstudio/bin"
+# End of LM Studio CLI section
+

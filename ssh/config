@@ -1,6 +1,6 @@
 Include ~/.orbstack/ssh/config
 
-PubkeyAcceptedKeyTypes=+ssh-dss
+#PubkeyAcceptedKeyTypes=+ssh-dss
 
 Include ~/.ssh/config.local
 
