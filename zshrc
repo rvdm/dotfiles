@@ -129,5 +129,5 @@ export HOMEBREW_DOWNLOAD_CONCURRENCY=auto
 export PATH="$PATH:/Users/rvdm/.lmstudio/bin"
 # End of LM Studio CLI section
 if [ -f ~/.zsh.local ]; then
-    include ~/.zshrc.local
+    source ~/.zshrc.local
 fi
