@@ -128,6 +128,6 @@ export HOMEBREW_DOWNLOAD_CONCURRENCY=auto
 # Added by LM Studio CLI (lms)
 export PATH="$PATH:/Users/rvdm/.lmstudio/bin"
 # End of LM Studio CLI section
-if [ -f ~/.zsh.local ]; then
+if [ -f ~/.zshrc.local ]; then
     source ~/.zshrc.local
 fi
